@@ -1,0 +1,17 @@
+<div *ngFor="let task of tasks">
+
+  <mat-card class ="event-card" >
+
+    <mat-card-header>
+      <mat-card-title>{{task.title}}</mat-card-title>
+    </mat-card-header>
+
+     <mat-card-actions>
+      <button class="edittButtons" mat-button *ngIf = "allow" (click)="putTask(task)">Изменить</button>
+      <button class="edittButtons" style="background-color: #DA5656;" mat-button *ngIf = "allow" (click)="deletePost(task)">Удалить</button>
+    </mat-card-actions>
+
+  </mat-card>
+
+</div>
+  <button class="addButton" mat-button *ngIf = "allow && dateSelected" (click)="addNewTask()" >Добавить метку</button>

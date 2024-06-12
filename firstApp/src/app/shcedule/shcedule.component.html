@@ -1,0 +1,24 @@
+<app-navigation></app-navigation>
+
+
+<div class="container">
+  <div class="main">
+    <div class="eventList">
+      <app-events-list [selectedDate]="selectedStartDate"
+                      [tasks]="selectedDateEvents"
+                      [allow]="allow"
+                      [dateSelected]="dateSelected"
+                      (updateEvent)="updateTasks()"></app-events-list>
+    </div>
+
+    <div class="calendar">
+      <full-calendar [options]="calendarOptions"></full-calendar>
+    </div>
+    
+    <div class="select">
+      <select class="custom-select" [ngModel]="selectedOption" (ngModelChange)="onSelectChange($event)" *ngIf="isAdminLogged">
+        <option *ngFor="let option of options" [value]="option.username">{{ option.username }}</option>
+      </select>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+mat-card{
+  margin-bottom: 10px;
+}
+
+mat-card-actions{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.edittButtons{
+  background-color: #96D3FF;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  float: right;
+}
+
+.addButton {
+  background-color: #2454FF;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  float: right;
+  font-size: large;
+}

@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>Новая метка</h1>
+<div mat-dialog-content style="display: inline; padding: 0px; margin: auto;">
+
+  <mat-form-field class="full-width-input">
+    <input matInput type="text"  style="padding-left: 20px" placeholder="Текст"
+      [(ngModel)]="editingTask.title" required>
+  </mat-form-field>
+</div>
+
+<div class="actions" mat-dialog-actions>
+  <button class="addButton" style="background-color: #DA5656;" mat-raised-button (click)="onNoClick()">Отмена</button>
+  <button class="addButton" mat-raised-button color="primary"
+    [mat-dialog-close]="editingTask">Добавить метку</button>
+</div>

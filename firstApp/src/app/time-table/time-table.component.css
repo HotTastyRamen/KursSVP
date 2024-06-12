@@ -1,0 +1,44 @@
+table {
+  margin: 0 auto; /* Центрирование таблицы */
+  border-collapse: separate;
+  border-spacing: 4px;  /*Расстояние между столбцами */
+  font-family: 'Roboto', sans-serif; /* Установка шрифта Roboto */
+  text-align: center;
+  padding-top: 5vh;
+
+}
+
+th, td {
+  font-size: 14px; /* Установка размера шрифта 12px */
+  vertical-align: middle;
+  padding: 0;
+}
+th {
+  background-color: #DCE4FF; /* Фоновый цвет заголовков */
+}
+td {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Если текст не помещается в ячейку, обрезать и добавить многоточие */
+  font-weight: bold;
+  background-color: #EEEEEE;
+
+}
+
+.weekend{
+  background-color: #F2F3A4;
+}
+
+div{
+  margin-right: 20px;
+  max-width: 40%;
+}
+
+td.FirstCol, th.FirstCol {
+  max-height: 40px;
+  max-width: 90px;
+  width: 90px;
+  height: 40px;
+  background-color: #DCE4FF;
+}

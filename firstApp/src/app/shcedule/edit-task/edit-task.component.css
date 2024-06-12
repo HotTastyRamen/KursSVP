@@ -1,0 +1,27 @@
+.actions{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.addButton {
+  background-color: #2454FF;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  float: right;
+  font-size: large;
+}
+
+input{
+  width: 80%;
+}
+
+mat-form-field{
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 20px;
+  margin-right: 20px;
+}

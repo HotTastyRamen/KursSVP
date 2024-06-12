@@ -1,0 +1,25 @@
+<app-navigation></app-navigation>
+
+<table id="workerSchdls">
+  <tr>
+      <th class="FirstCol">
+        Сотрудники
+      </th>
+      <th *ngFor = "let column of workerSchdls[0].day">
+        {{column.date.substring(0,2)}} <br>
+        {{column.week_day}}
+      </th>
+    </tr>
+
+  <tr *ngFor = "let row of workerSchdls">
+
+    <td class="FirstCol">
+      {{row.workerName}}
+    </td>
+    <td *ngFor = "let day of row.day" [ngClass]=" day.type_id === 2 ? 'weekend' : '' ">
+      {{day.type_id}}
+    </td>
+  </tr>
+</table>
+
+

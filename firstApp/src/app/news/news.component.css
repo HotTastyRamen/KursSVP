@@ -1,0 +1,72 @@
+mat-card {
+  width: 35vw;
+  margin-bottom: 20px;
+}
+
+app-navigation{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.addButton {
+
+  position: fixed;
+  top:93%;
+  left:90%;
+  background-color: #2454FF;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  float: right;
+  font-size: large;
+}
+
+.postButtons{
+  background-color: #96D3FF;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  float: right;
+}
+
+.cardImg{
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+p{
+
+  font-family: "Roboto", sans-serif;
+  font-size: large;
+}
+
+mat-card-actions{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.actions{
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  z-index: 1;
+  display: flex;
+  margin-top: 80px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

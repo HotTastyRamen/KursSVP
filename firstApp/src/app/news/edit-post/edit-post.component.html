@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>Ноывй пост</h1>
+
+<div class="main" mat-dialog-content style="display: inline; padding: 0px; margin: auto;">
+
+    <input class="fileInput" type="file" accept="image/*" (change)="onFileSelected($event)">
+
+    <img mat-card-image src="{{base64String}}">
+
+  <mat-form-field class="full-width-input">
+    <input matInput type="text" style="padding-left: 20px"  placeholder="postText"
+      [(ngModel)]="editingPost.text" required>
+  </mat-form-field>
+
+</div>
+
+<div class="actions" mat-dialog-actions>
+  <button class="addButton" style="background-color: #DA5656;" (click)="onNoClick()">Отмена</button>
+  <button class="addButton" mat-raised-button
+    [mat-dialog-close]="editingPost">Создать</button>
+</div>

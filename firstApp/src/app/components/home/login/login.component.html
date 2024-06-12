@@ -1,0 +1,20 @@
+<div>
+  <div class="square-container">
+      <h1>TSM</h1>
+      <div>
+          <input [(ngModel)]="credential.username" matInput type="text" placeholder="Аккаунт"
+              >
+      </div>
+      <div>
+          <input [(ngModel)]="credential.password" type="password" placeholder="Пароль"
+            >
+      </div>
+      <div *ngIf="errorAuth" style="margin-bottom: 25px; color: red">
+          Неправильное имя или пароль
+      </div>
+
+      <button class="logInButton" (click)="login()">
+          Войти
+      </button>
+  </div>
+</div>

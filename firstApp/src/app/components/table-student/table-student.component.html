@@ -1,0 +1,76 @@
+<!-- <h1>Student table</h1>
+<table>
+  <thead>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Surname</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{student.id}}</td>
+      <td>{{student.name}}</td>
+      <td>{{student.surname}}</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+
+
+<button (click)="addNewStudent()">Add new student</button> -->
+<mat-form-field>
+  <mat-label>Filter</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+</mat-form-field>
+
+
+<div class="mat-elevation-z8">
+<table class="container" mat-table [dataSource]="students" matSort>
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
+    <td mat-cell *matCellDef="let student"> {{student.id}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="fio">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> fio </th>
+    <td mat-cell *matCellDef="let student"> {{student.fio}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="group">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> group </th>
+    <td mat-cell *matCellDef="let student"> {{student.group}} </td>
+  </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="phoneNumber">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> phoneNumber </th>
+      <td mat-cell *matCellDef="let student"> {{student.phoneNumber}} </td>
+    </ng-container>
+
+  <ng-container matColumnDef="Func">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Func. </th>
+    <td mat-cell *matCellDef="let row; let index = index;">
+       <button class="button-6" role="button" mat-raised-button (click)="putNewStudent(row)">put</button>
+       <button class="button-6" role="button" mat-raised-button (click)="deleteStudent(row)">delete</button> </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  <tr class="mat-row" *matNoDataRow>
+    <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+  </tr>
+</table>
+<mat-paginator
+  (page)="onChangePage($event)"
+  [pageSizeOptions]="[5, 10, 25, 100]"
+  aria-label="Select page of users">
+</mat-paginator>
+</div>
+<button class="button-6" role="button" (click)="addNewStudent()">Add new student</button>
